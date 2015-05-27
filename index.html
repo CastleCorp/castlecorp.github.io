@@ -27,6 +27,7 @@
 	<!-- Custom styles CSS -->
 	<link href="assets/css/style.css" rel="stylesheet" media="screen">
 
+	<!-- Load Modernizr -->
 	<script src="assets/js/modernizr.custom.js"></script>
 
 </head>
@@ -248,7 +249,7 @@
 
 						<div class="grid wow zoomIn">
 							<figure class="effect-bubba">
-								<img src="assets/images/portfolio_shot.jpg" alt="FHI Mobile"/>
+								<img class="lazy" data-original="assets/images/portfolio_shot.jpg" width="1920" height="1200" alt="FHI Mobile"/>
 								<figcaption>
 									<h2><span>FHI</span> Mobile</h2>
 									<p>Mobile website for Fairhill International</p>
@@ -262,7 +263,7 @@
 
 						<div class="grid wow zoomIn">
 							<figure class="effect-bubba">
-								<img src="assets/images/t2t_portfolio.jpg" alt="Tak2Troops.org">
+								<img class="lazy" data-original="assets/images/t2t_portfolio.jpg" width="1920" height="1200" alt="Tak2Troops.org">
 								<figcaption>
 									<h2><a href="http://www.talk2troops.org" style="color: white;" target="_blank"><span>Talk2Troops</span>.org</h2>
 									<p>Co-Founder, developer and designer.</a></p>
@@ -276,7 +277,7 @@
 
 						<div class="grid wow zoomIn">
 							<figure class="effect-bubba">
-								<img src="assets/images/zen_clock.jpg" alt="Zen Clock"/>
+								<img class="lazy" data-original="assets/images/zen_clock.jpg" width="1920" height="1200" alt="Zen Clock"/>
 								<figcaption>
 									<h2><a href="http://castlecorp.github.io/projects/clock" style="color:white;" target="_blank"><span>Zen</span> Clock</h2>
 									<p>Simple project working with jQuery.</a></p>
@@ -290,7 +291,7 @@
 
 						<div class="grid wow zoomIn">
 							<figure class="effect-bubba">
-								<img src="assets/images/backin5.jpg" alt="BackIn5"/>
+								<img class="lazy" data-original="assets/images/backin5.jpg" width="1920" height="1200" alt="BackIn5"/>
 								<figcaption>
 									<h2><a href="http://castlecorp.github.io/BackIn5/" style="color:white;" target="_blank">SAS <span>BackInFive</span></h2>
 									<p>Sign-in/out web-app for SAS.</a></p>
@@ -304,7 +305,7 @@
 
 						<div class="grid wow zoomIn">
 							<figure class="effect-bubba">
-								<img src="assets/images/sas_scav.jpg" alt="SAS Scavenger Hunt"/>
+								<img class="lazy" data-original="assets/images/sas_scav.jpg" width="1920" height="1200" alt="SAS Scavenger Hunt"/>
 								<figcaption>
 									<h2><a href="https://scavenge.standrews-de.org" style="color:white;"><span>SAS</span><br>Scavenger Hunt</h2>
 									<p>My first site: scavenger hunt for SAS.</a></p>
@@ -318,7 +319,7 @@
 
 						<div class="grid wow zoomIn">
 							<figure class="effect-bubba">
-								<img src="assets/images/jtr.jpg" alt="John The Ripper"/>
+								<img class="lazy" data-original="assets/images/jtr.jpg" width="1920" height="1200" alt="John The Ripper"/>
 								<figcaption>
 									<h2><span>John The Ripper</span> GUI</h2>
 									<p>GUI frontend for John The Ripper</p>
@@ -473,14 +474,14 @@
 
 					<div id="cbp-qtrotator" class="cbp-qtrotator">
 						<div class="cbp-qtcontent">
-							<img src="assets/images/client-1.jpg" alt="client-1" />
+							<img class="lazy" data-original="assets/images/client-1.jpg" width="210" height="140" alt="client-1" />
 							<blockquote>
 								<p>Work with John was a pleasure. He understood exactly what I wanted and created an awesome site for my company.</p>
 								<footer>Pino Caruso</footer>
 							</blockquote>
 						</div>
 						<div class="cbp-qtcontent">
-							<img src="assets/images/client-2.jpg" alt="client-2" />
+							<img class="lazy" data-original="assets/images/client-2.jpg" width="210" height="140" alt="client-2" />
 							<blockquote>
 								<p>I'm really happy with the results. Get 100% satisfaction is difficult but Alex got it without problems.</p>
 								<footer>Jane Doe</footer>
@@ -627,9 +628,20 @@
 		<script src="assets/js/jquery.easing.min.js"></script>
 		<script src="assets/js/jquery.inview.min.js"></script>
 		<script src="assets/js/jquery.prettyPhoto.js"></script>
+		<script src="assets/js/jquery.lazyload.js"></script>
 		<script src="assets/js/mousescroll.js"></script>
 		<script src="assets/js/respond.min.js"></script>
 		<script src="assets/js/stellar.js"></script>
+
+		<!-- Lazyload implementation -->
+		<script type="text/javascript">
+			$(function() {
+    			$("img.lazy").lazyload({
+    				threshold: 200,
+    				effect: "fadeIn"
+    			});
+			});
+		</script>
 
 		<script type="text/javascript">
 		$(window).load(function(){

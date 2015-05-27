@@ -1,10 +1,408 @@
-<html>
+<!DOCTYPE html >
+<html lang="en">
 <head>
-
-	<link rel="stylesheet" type="text/css" href="style.css">
-
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Parker Thomas | CV</title>
+<link rel="stylesheet" type="text/css" href="assets/IDRViewer.css">
+<link rel="stylesheet" type="text/css" href="assets/styles.css">
+<link rel="stylesheet" type="text/css" href="assets/font-awesome.min.css">
+<script type="text/javascript">
+var extLoaded = false;
+var intLoaded = false;
+function idrLoad() {
+	idrLoaded = true;
+	var bounds;
+	var heights = new Array(200);
+	IDRViewer.makeNavBar(1,1,935,1210,2,heights,'.jpg',bounds, true);
+}
+</script>
+<script src="assets/IDRViewer.js" type="text/javascript"></script>
 </head>
-<body>
-	<h2>Test</h2>
+
+<!-- Background pattern courtesy of http://subtlepatterns.com/grey-washed-wall/ -->
+<body style="background:url('assets/bg.png') repeat scroll 0 0 transparent;">
+
+<div id="left">
+<div id="leftNav">
+	<div id="btnThumbnails" onclick="IDRViewer.toggleOutlines(false)" title="Thumbnails" class="navBtn inactive"></div>
+	<div id="btnOutlines" onclick="IDRViewer.toggleOutlines(true)" title="Bookmarks" class="navBtn inactive"></div>
+</div>
+<div id="leftContent">
+	<div id="thumbnailPanel"></div>
+	<div id="outlinePanel"></div>
+</div>
+</div>
+
+<div id="main">
+
+<div id="mainNav">
+
+	<div id="goHome" class="navBtn"></div>
+
+	<div id="btnSideToggle" onclick="IDRViewer.toggleThumbnails();" class="navBtn"><div title="Sidebar"></div></div>
+
+	<div id="btnPrev" title="Previous Page" onclick="IDRViewer.prev()" class="navBtn"></div>
+	<select id="goBtn" onchange="IDRViewer.goToPage(0)">
+
+	</select>
+	<span id="pgCount"></span>
+	<div id="btnNext" title="Next Page" onclick="IDRViewer.next()" class="navBtn"></div>
+
+	<div id="btnSelect" title="Select" onclick="IDRViewer.setSelectMode(0)" class="navBtn"></div>
+	<div id="btnMove" title="Pan" onclick="IDRViewer.setSelectMode(1)" class="navBtn"></div>
+
+	<div id="btnZoomOut" title="Zoom Out" onclick="IDRViewer.zoomOut()" class="navBtn"></div>
+	<select id="zoomBtn" onchange="IDRViewer.zoomUpdate()">
+		<option value="0">100%</option>
+		<option value="1">Actual Size</option>
+		<option value="2">Fit Width</option>
+		<option value="3">Fit Height</option>
+		<option value="4">Fit Page</option>
+		<option value="5">Automatic</option>
+
+	</select>
+	<div id="btnZoomIn" title="Zoom In" onclick="IDRViewer.zoomIn()" class="navBtn"></div>
+	<div id="btnFullscreen" title="Fullscreen" onclick="IDRViewer.toggleFullScreen();" class="navBtn closed"></div>
+</div>
+
+<div id="mainContent">
+
+<div id="contentContainer">
+
+
+
+<div id="jpedal" style="position:relative;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+function load() {
+	load1();
+}
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }
+        }
+
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+<!-- Begin output for page 1-->
+<div id="page1" style="position:relative; width:935px; height:1210px; overflow: hidden; background-color: white; margin: 0 auto 10px;">
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_1{left:44px;top:29px;}
+#t2_1{left:44px;top:56px;}
+#t3_1{left:44px;top:118px;}
+#t4_1{left:44px;top:139px;}
+#t5_1{left:44px;top:174px;letter-spacing:-1px;}
+#t6_1{left:44px;top:195px;}
+#t7_1{left:766px;top:168px;}
+#t8_1{left:745px;top:247px;}
+#t9_1{left:767px;top:346px;}
+#ta_1{left:738px;top:464px;}
+#tb_1{left:311px;top:586px;}
+#tc_1{left:311px;top:808px;}
+#td_1{left:311px;top:840px;}
+#te_1{left:430px;top:840px;}
+#tf_1{left:311px;top:861px;}
+#tg_1{left:430px;top:861px;}
+#th_1{left:311px;top:882px;}
+#ti_1{left:430px;top:882px;}
+#tj_1{left:311px;top:913px;}
+#tk_1{left:430px;top:902px;}
+#tl_1{left:430px;top:923px;}
+#tm_1{left:311px;top:943px;}
+#tn_1{left:430px;top:943px;letter-spacing:-1px;}
+#to_1{left:311px;top:964px;}
+#tp_1{left:430px;top:964px;}
+#tq_1{left:311px;top:985px;}
+#tr_1{left:311px;top:1005px;}
+#ts_1{left:430px;top:995px;}
+#tt_1{left:311px;top:1026px;letter-spacing:1px;}
+#tu_1{left:430px;top:1026px;}
+#tv_1{left:311px;top:1057px;}
+#tw_1{left:430px;top:1046px;}
+#tx_1{left:430px;top:1067px;}
+#ty_1{left:631px;top:808px;}
+#tz_1{left:631px;top:840px;}
+#t10_1{left:631px;top:861px;}
+#t11_1{left:631px;top:882px;}
+#t12_1{left:311px;top:48px;}
+#t13_1{left:311px;top:78px;}
+#t14_1{left:311px;top:93px;}
+#t15_1{left:311px;top:136px;}
+#t16_1{left:311px;top:168px;}
+#t17_1{left:311px;top:188px;}
+#t18_1{left:311px;top:213px;}
+#t19_1{left:311px;top:247px;}
+#t1a_1{left:311px;top:267px;}
+#t1b_1{left:311px;top:292px;}
+#t1c_1{left:311px;top:311px;}
+#t1d_1{left:311px;top:346px;}
+#t1e_1{left:311px;top:365px;}
+#t1f_1{left:311px;top:390px;}
+#t1g_1{left:311px;top:410px;}
+#t1h_1{left:311px;top:429px;}
+#t1i_1{left:311px;top:464px;}
+#t1j_1{left:311px;top:483px;}
+#t1k_1{left:311px;top:508px;}
+#t1l_1{left:311px;top:554px;}
+#t1m_1{left:311px;top:611px;}
+#t1n_1{left:311px;top:631px;}
+#t1o_1{left:311px;top:650px;}
+#t1p_1{left:311px;top:689px;}
+#t1q_1{left:311px;top:709px;}
+#form1_1{	border-style:none;	z-index:2;	position: absolute;	left:630px;	top:860px;	width:124px;	height:19px;	text-align:left;	background: transparent;	font:normal 13px Arial, Helvetica, sans-serif;}
+#form1_2{	border-style:none;	z-index:2;	position: absolute;	left:630px;	top:840px;	width:144px;	height:17px;	text-align:left;	background: transparent;	font:normal 12px Arial, Helvetica, sans-serif;}
+#form1_3{	border-style:none;	z-index:2;	position: absolute;	left:41px;	top:194px;	width:164px;	height:19px;	text-align:left;	background: transparent;	font:normal 13px Arial, Helvetica, sans-serif;}
+#form1_4{	border-style:none;	z-index:2;	position: absolute;	left:630px;	top:880px;	width:199px;	height:19px;	text-align:left;	background: transparent;	font:normal 13px Arial, Helvetica, sans-serif;}
+#t1r_1{left:311px;top:748px;}
+
+.s4_1{
+	FONT-SIZE: 59px;
+	FONT-FAMILY: QEBAAA-Modern20BT-RomanB1;
+	color: rgb(64,46,117);
+}
+
+.s2_1{
+	FONT-SIZE: 59px;
+	FONT-FAMILY: QJBAAA-SourceSansPro-Regular1;
+	color: rgb(35,31,32);
+}
+
+.s1_1{
+	FONT-SIZE: 109px;
+	FONT-FAMILY: QEBAAA-Modern20BT-RomanB1;
+	color: rgb(66,48,122);
+}
+
+.s3_1{
+	FONT-SIZE: 62px;
+	FONT-FAMILY: QEBAAA-Modern20BT-RomanB1;
+	color: rgb(167,169,172);
+}
+
+.t.m1_1{
+-webkit-transform:matrix(0.95,0,-0.28,0.95,0, 0) scale(0.25);
+-ms-transform:matrix(0.95,0,-0.28,0.95,0, 0) scale(0.25);
+-moz-transform:matrix(0.95,0,-0.28,0.95,0, 0) scale(0.25);
+-o-transform:matrix(0.95,0,-0.28,0.95,0, 0) scale(0.25);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style type="text/css" >
+
+@font-face {
+	font-family: QJBAAA-SourceSansPro-Regular1;
+	src :url("index/fonts/QJBAAA-SourceSansPro-Regular.woff") format("woff");
+}
+
+@font-face {
+	font-family: QEBAAA-Modern20BT-RomanB1;
+	src :url("index/fonts/QEBAAA-Modern20BT-RomanB.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_1" class="t s1_1">Parker</div>
+<div id="t2_1" class="t s1_1">Thomas</div>
+<div id="t3_1" class="t s2_1">7917 East Boulevard Drive</div>
+<div id="t4_1" class="t s2_1">Alexandria, VA</div>
+<div id="t5_1" class="t s2_1">(571) 228 6515 </div>
+<div id="t6_1" class="t s2_1">pthomas1997@gmail.com</div>
+<div id="t7_1" class="t m1_1 s3_1">April 2015 - present</div>
+<div id="t8_1" class="t m1_1 s3_1">January 2015 - present</div>
+<div id="t9_1" class="t m1_1 s3_1">June 2013 - present</div>
+<div id="ta_1" class="t m1_1 s3_1">May 2014 - August 2014</div>
+<div id="tb_1" class="t s2_1">St. Andrews School</div>
+<div id="tc_1" class="t s4_1">SKILLS &amp; EXPERTISE</div>
+<div id="td_1" class="t s2_1">Branding</div>
+<div id="te_1" class="t s2_1">CSS</div>
+<div id="tf_1" class="t s2_1">HTML</div>
+<div id="tg_1" class="t s2_1">Java</div>
+<div id="th_1" class="t s2_1">Javascript</div>
+<div id="ti_1" class="t s2_1">jQuery</div>
+<div id="tj_1" class="t s2_1">Leadership</div>
+<div id="tk_1" class="t s2_1">Mobile web</div>
+<div id="tl_1" class="t s2_1">design</div>
+<div id="tm_1" class="t s2_1">Photoshop</div>
+<div id="tn_1" class="t s2_1">PHP</div>
+<div id="to_1" class="t s2_1">Programming</div>
+<div id="tp_1" class="t s2_1">Python</div>
+<div id="tq_1" class="t s2_1">Responsive</div>
+<div id="tr_1" class="t s2_1">webdesign</div>
+<div id="ts_1" class="t s2_1">Social media</div>
+<div id="tt_1" class="t s2_1">SQL</div>
+<div id="tu_1" class="t s2_1">Teaching</div>
+<div id="tv_1" class="t s2_1">Web design</div>
+<div id="tw_1" class="t s2_1">Web</div>
+<div id="tx_1" class="t s2_1">development</div>
+<div id="ty_1" class="t s4_1">LINKS</div>
+<div id="tz_1" class="t s2_1">castlecorp.github.io</div>
+<div id="t10_1" class="t s2_1">github.com/castlecorp</div>
+<div id="t11_1" class="t s2_1">linkedin.com/in/parkerthomas1</div>
+<div id="t12_1" class="t s4_1">ASPIRATIONS</div>
+<div id="t13_1" class="t s2_1">I am planning to major in computer science and continue with web design. I am also</div>
+<div id="t14_1" class="t s2_1">interested in business, system administration, and information security.</div>
+<div id="t15_1" class="t s4_1">WORK HISTORY</div>
+<div id="t16_1" class="t s2_1">Fair Hill International</div>
+<div id="t17_1" class="t s2_1">Lead Developer</div>
+<div id="t18_1" class="t s2_1">Working pro-bono on the FHI mobile website.</div>
+<div id="t19_1" class="t s2_1">Talk2Troops</div>
+<div id="t1a_1" class="t s2_1">Lead Developer</div>
+<div id="t1b_1" class="t s2_1">Lead developer of Talk2Troops.org, which allows users to easily send letters to active and</div>
+<div id="t1c_1" class="t s2_1">retired service members in the military.</div>
+<div id="t1d_1" class="t s2_1">Burgundy Farms Summer Day Camp</div>
+<div id="t1e_1" class="t s2_1">Counselor</div>
+<div id="t1f_1" class="t s2_1">I work as the co-head of the computer camp at BFSDC, teaching kids basic computer skills</div>
+<div id="t1g_1" class="t s2_1">such as the parts of a computer and how they work, photoshop, abd making comic books. </div>
+<div id="t1h_1" class="t s2_1">I continue to work at BFSDC in the summer.</div>
+<div id="t1i_1" class="t s2_1">Infogroup Inc.</div>
+<div id="t1j_1" class="t s2_1">Intern</div>
+<div id="t1k_1" class="t s2_1">Assisted with list marketing proposals, target acquisition and research.</div>
+<div id="t1l_1" class="t s4_1">EDUCATION</div>
+<div id="t1m_1" class="t s2_1">I am a full-time highschool student attending St. Andrews School as a boarding student. I take</div>
+<div id="t1n_1" class="t s2_1">a wide variety of courses from biology to english to french, and my favorite: computer</div>
+<div id="t1o_1" class="t s2_1">science. </div>
+<div id="t1p_1" class="t s2_1">I love taking my learning and experience out of the classroom and building on it by working</div>
+<div id="t1q_1" class="t s2_1">on projects and always trying to build my skills. </div>
+<div id="t1r_1" class="t s2_1">I will be graduating June 2016.</div>
+
+<!-- End text definitions -->
+
+
+<!-- Begin Form Data -->
+<form>
+<input type="button"  tabindex="1"  id="form1_1" name="16 0 R"  pdfFieldName="16 0 R" onclick="window.open('http://castlecorp.github.io','_blank');" style="cursor:pointer;" title="http://castlecorp.github.io" />
+<input type="button"  tabindex="3"  id="form1_2" name="15 0 R"  pdfFieldName="15 0 R" onclick="window.open('http://github.com/Castlecorp','_blank');" style="cursor:pointer;" title="http://github.com/Castlecorp" />
+<input type="button"  tabindex="2"  id="form1_3" name="14 0 R"  pdfFieldName="14 0 R" onclick="window.location.href='mailto:pthomas1997@gmail.com';" style="cursor:pointer;" title="mailto:pthomas1997@gmail.com" />
+<input type="button"  tabindex="4"  id="form1_4" name="17 0 R"  pdfFieldName="17 0 R" onclick="window.open('http://linkedin.com/in/parkerthomas1','_blank');" style="cursor:pointer;" title="http://linkedin.com/in/parkerthomas1" />
+
+</form>
+<!-- End Form Data -->
+<!-- Begin page background -->
+<div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg1"><object width="935" height="1210" data="index/1.svg" type="image/svg+xml" id="pdf1" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script type="text/javascript">
+var isIE = false;
+var f1 = [['t3_1',643],['t4_1',356],['t5_1',338],['t7_1',541],['t8_1',627],['t9_1',536],['ta_1',652],['tb_1',473],['tc_1',690],['tk_1',275],['ts_1',318],['tv_1',279],['t13_1',2079],['t14_1',1755],['t15_1',498],['t16_1',523],['t17_1',377],['t18_1',1109],['t1a_1',377],['t1b_1',2189],['t1c_1',967],['t1d_1',916],['t1f_1',2218],['t1g_1',2225],['t1h_1',1072],['t1i_1',349],['t1k_1',1736],['t1m_1',2310],['t1n_1',2122],['t1p_1',2255],['t1q_1',1163],['t1r_1',747]];
+function load1(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f1);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 64;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_1");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+<!-- End output for page 1-->
+
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+	if (extLoaded) { idrLoad(); } else { intLoaded = true; }
+</script>
 </body>
 </html>
