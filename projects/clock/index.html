@@ -82,7 +82,7 @@ $(document).ready(function() {
 		if (hours < 10) {
 			hours = "0" + hours;
 		};
-		if (hours > 12) {
+		if (hours >= 12) {
 			hours = hours - 12;
 			meridiem = "PM";
 		};
