@@ -134,26 +134,26 @@
 
 		$('#contact-form').submit(function(e) {
 
-			e.preventDefault();
+			/* e.preventDefault();
 
 			var c_name = $('#c_name').val();
 			var c_email = $('#c_email').val();
 			var c_message = $('#c_message ').val();
-			var response = $('#contact-form .ajax-response');
+			var response = $('#contact-form .ajax-response'); */
 
 			if (( c_name== '' || c_email == '' || c_message == '') || (!isValidEmailAddress(c_email) )) {
 				response.fadeIn(500);
 				response.html('<i class="fa fa-warning"></i> Please fix the errors and try again.');
 			}
 
-			else {
+		//	else {
 				    $('#form').submit(
     					{
         					submit: true
 					});
 				    $('#contact-form .ajax-hidden').fadeOut(500);
 				    response.html("Message Sent. I will contact you asap. Thanks.").fadeIn(500);
-				}
+			//	}
             
             	return false;
 			});
