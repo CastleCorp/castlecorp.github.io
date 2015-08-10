@@ -146,7 +146,11 @@
 				response.html('<i class="fa fa-warning"></i> Please fix the errors and try again.');
 			}
 
-			else {				
+			else {
+				    $('#form').submit(
+    					{
+        					submit: true
+					});
 				    $('#contact-form .ajax-hidden').fadeOut(500);
 				    response.html("Message Sent. I will contact you asap. Thanks.").fadeIn(500);
 				}
