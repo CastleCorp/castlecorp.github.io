@@ -132,7 +132,7 @@
 		 * Contact form ajax
 		/* ---------------------------------------------- */
 
-		/*$('#contact-form').submit(function(e) {
+		$('#contact-form').submit(function(e) {
 
 			 e.preventDefault();
 
@@ -156,7 +156,7 @@
 				}
             
             	return false;
-			});*/
+			});
 
 	});
 
