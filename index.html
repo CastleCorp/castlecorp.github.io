@@ -141,10 +141,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 							<li><a href="#services">About Me</a></li>
 							<li><a href="#portfolio">Portfolio</a></li>
 							<li><a href="#skills">Skills</a></li>
-							<!--<li><a href="#testimonials">Testimonials</a></li>-->
+							<li><a href="#testimonials">Testimonials</a></li>
 							<li><a href="#contact">Contact</a></li>
 							<li><a>|</a></li>
-							<li><a href="./cv/"><p style="border-bottom:1px dotted;">CV</p></a></li>
+							<li><a href="http://blog.iampjt.com"><p style="border-bottom:1px dotted;">Blog</p></a></li>
+							<li><a href="./cv/"><p style="border-bottom:1px dotted; color:red;">CV</p></a></li>
 						</ul>
 					</div>
 
@@ -285,7 +286,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 						<div class="col-sm-6 col-sm-offset-3">
 
-							<div class="pfblock-header wow fadeInUp">
+							<div class="pfblock-header">
 								<h2 class="pfblock-title">My work</h2>
 								<div class="pfblock-line"></div>
 								<div class="pfblock-subtitle">
@@ -504,7 +505,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 								<!-- CallToAction end -->
 
 								<!-- Testimonials start -->
-								<!--
+								
 								<section id="testimonials" class="pfblock pfblock-gray">
 
 								<div class="container">
@@ -517,29 +518,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 								<h2 class="pfblock-title">What my clients have to say</h2>
 								<div class="pfblock-line"></div>
 								<div class="pfblock-subtitle">
-								A selection of testimonials from clients I have worked with. See <a href="./rec" style="border-bottom: 1px dotted #E7746F;">here</a> for the full testimonials.
+								A selection of testimonials from clients I have worked with.
 								</div>
 								</div>
 
 								</div>
 
 								</div><!-- .row -->
-								<!--
+
 								<div class="row">
 
 								<div id="cbp-qtrotator" class="cbp-qtrotator">
 								<div class="cbp-qtcontent">
-								<img class="lazy" data-original="assets/images/client-1.jpg" width="210" height="140" alt="client-1" />
+								<img class="lazy" data-original="assets/images/ryan.jpg" width="210" height="140" alt="Ryan B." />
 								<blockquote>
-								<p>Work with John was a pleasure. He understood exactly what I wanted and created an awesome site for my company.</p>
-								<footer>Pino Caruso</footer>
-								</blockquote>
-								</div>
-								<div class="cbp-qtcontent">
-								<img class="lazy" data-original="assets/images/client-2.jpg" width="210" height="140" alt="client-2" />
-								<blockquote>
-								<p>I'm really happy with the results. Get 100% satisfaction is difficult but Alex got it without problems.</p>
-								<footer>Jane Doe</footer>
+								<p>Parker worked hard to create and develop our website Talk2Troops.org, a platform to write letters to soldiers. He went above and beyond the call of duty and is an excellent wed designer.</p>
+								<footer>Ryan B.</footer>
 								</blockquote>
 								</div>
 
@@ -547,9 +541,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 								</div><!-- .row -->
 
-								<!--
+								
 								</div><!-- .row -->
-								<!--</section>
+								</section>
 
 								<!-- Testimonial end -->
 
@@ -579,8 +573,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 								<div class="col-sm-6 col-sm-offset-3">
 
-								<div class="wow fadeInUp" style="margin-left:11px;">	<a href="mailto:parker@iampjt.com" style="font-size:30px; border-bottom: 1px dotted;">Send an email to parker@iampjt.com!</a> </div>
-
 									<!-- Google contact schema -->
 									<div itemscope itemtype="http://schema.org/Person" style="display:none;">
 										My name is <span itemprop="name">Parker Thomas</span>
@@ -592,7 +584,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 									</div>
 
 									<!-- ./contact schema -->
-									<!--	<form id="contact-form" role="form">
+									
+									<form id="c_form" role="form" action="http://formspree.io/pthomas1997@gmail.com" method="POST">
 									<div class="ajax-hidden">
 									<div class="form-group wow fadeInUp">
 									<label class="sr-only" for="c_name">Name</label>
@@ -600,12 +593,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 									</div>
 
 									<div class="form-group wow fadeInUp" data-wow-delay=".1s">
-									<label class="sr-only" for="c_email">Email</label>
-									<input type="email" id="c_email" class="form-control" name="c_email" placeholder="E-mail">
+									<label class="sr-only" for="_replyto">Email</label>
+									<input type="email" id="c_email" class="form-control" name="_replyto" placeholder="E-mail">
 									</div>
 
 									<div class="form-group wow fadeInUp">
-									<label class="sr-only" for="c_phone">Name</label>
+									<label class="sr-only" for="c_phone">Phone</label>
 									<input type="text" id="c_phone" class="form-control" name="c_phone" placeholder="Phone">
 									</div>
 
@@ -622,10 +615,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 									<textarea class="form-control" id="c_message" name="c_message" rows="7" placeholder="Message"></textarea>
 									</div>
 
-									<button type="submit" class="btn btn-lg btn-block wow fadeInUp" data-wow-delay=".3s">Send Message</button>
+									<input type="submit" class="btn btn-lg btn-block wow fadeInUp" data-wow-delay=".3s" value="Send Message"/>
 									</div>
 									<div class="ajax-response"></div>
-									</form>-->
+									</form>
 
 								</div>
 
@@ -701,6 +694,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					<script src="assets/js/mousescroll.js"></script>
 					<script src="assets/js/respond.min.js"></script>
 					<script src="assets/js/stellar.js"></script>
+					
+				<!-- UserReport Tracking -->
+<script type="text/javascript"> 
+var _urq = _urq || []; 
+_urq.push(['setGACode', 'UA-39800224-6']); 
+_urq.push(['initSite', '7fb7e45d-9d76-447d-9834-55f86319ef7f']); 
+(function() { 
+var ur = document.createElement('script'); ur.type = 'text/javascript'; ur.async = true; 
+ur.src = ('https:' == document.location.protocol ? 'https://cdn.userreport.com/userreport.js' : 'http://cdn.userreport.com/userreport.js'); 
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ur, s); 
+})(); 
+</script> 
+					<!-- ./userreport -->
 
 					<!-- Lazyload implementation -->
 					<script type="text/javascript">
@@ -751,10 +757,10 @@ twttr.conversion.trackPid('l6ifp', { tw_sale_amount: 0, tw_order_quantity: 0 });
 <img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l6ifp&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" /></noscript>
 <!-- ./twitter-conversion-tracking -->
 
-<a title="Real Time Web Analytics" href="http://clicky.com/100864523"><img alt="Real Time Web Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
+<!--<a title="Real Time Web Analytics" href="http://clicky.com/100864523"><img alt="Real Time Web Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" style="display:none;" /></a>
 <script src="//static.getclicky.com/js" type="text/javascript"></script>
 <script type="text/javascript">try{ clicky.init(100864523); }catch(e){}</script>
-<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100864523ns.gif" /></p></noscript>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100864523ns.gif" /></p></noscript>-->
 
 <!-- Start of Async HubSpot Analytics Code -->
   <script type="text/javascript">
