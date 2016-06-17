@@ -57,7 +57,7 @@ ul li { display: inline-block; margin: 0 10px; }
 ul li a { opacity: 0.5; }
 ul li a:hover { opacity: 1; -webkit-transition:all 0.2s ease-in-out; }
 
-ul li.envelope a { width: 33px; height: 33px; display: block; background: transparent url('/images/envelope.png') top center no-repeat; text-indent: -9999px; }
+ul li.envelope a { width: 33px; height: 33px; display: block; background: url('/images/envelope.png') top center no-repeat; text-indent: -9999px; }
 ul li.github a { width: 33px; height: 33px; display: block; background: transparent url('/images/github.png') top center no-repeat; text-indent: -9999px; }
 ul li.linkedin a { width: 33px; height: 33px; display: block; background: transparent url('/images/linkedin.png') top center no-repeat; text-indent: -9999px; }
 ul li.instagram a { width: 33px; height: 33px; display: block; background: transparent url('/images/instagram.png') top center no-repeat; text-indent: -9999px; }
