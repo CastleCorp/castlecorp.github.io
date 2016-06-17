@@ -28,16 +28,13 @@
   </ul>
   </div>
   <script type="text/javascript">
-    $( function() {
+    $(document).ready( function() {
       $.vegas('slideshow', {
         backgrounds:[
           { src:'/images/background.jpg' }
         ]
       })('overlay');
-    });
-    $(document).ready(function() {
-      //$(".content").css("display", "none");
-      $(".content").fadeIn(2000);
+      $(".content").fadeIn(1500);
     });
   </script>
 </body>
