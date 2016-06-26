@@ -1,11 +1,12 @@
 <!-- TODO: Add hover labels to social links. Add meta tags and work on SEO -->
+
 <!Doctype html>
 <html lang="en-US">
 <head>
   <script type="text/javascript">
-    var host = "iampjt.com";
-    if ((host == window.location.host) && (window.location.protocol != "https:"))
-        window.location.protocol = "https";
+  var host = "iampjt.com";
+  if ((host == window.location.host) && (window.location.protocol != "https:"))
+  window.location.protocol = "https";
   </script>
 
   <link rel="canonical" href="https://iampjt.com"/>
@@ -25,38 +26,51 @@
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-39800224-6', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
 </head>
 
 <!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-T3VZG2"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-T3VZG2');</script>
 <!-- End Google Tag Manager -->
 
 <div class="overlay">
-<body>
-  <div class="content">
-    <div class="logo"><h1><a href="#" title="Hi there!">Parker Thomas</a></h1></div>
-    <p><strong>Hello, I'm Parker</strong>. Student, designer, developer, aspiring pentester, maker of musical mashups, amateur photographer, and fan of the Oxford comma.</p>
-    <p></p>
-    <p><strong>Need a website?</strong> I build business and personal websites with a simple, clean-cut, modern look. Please <a href="mailto:parker@iampjt.com">email me</a> for more info.</p>
-  <ul>
-    <li class="envelope"><a href="mailto:parker@iampjt.com" title="Email Me"></a></li>
-    <li class="github"><a href="https://github.com/castlecorp" title="I'm on Github!"></a></li>
-    <li class="linkedin"><a href="https://www.linkedin.com/in/parkerthomas1" title="I'm on LinkedIn!"></a></li>
-    <li class="instagram"><a href="https://instagram.com/parkerjthomas" title="I take pictures sometimes"></a></li>
-    <li class="soundcloud"><a href="https://soundcloud.com/gh-0-stmusic" title="I put noises together sometimes"></a></li>
-  </ul>
-</div>
-  <script type="text/javascript">
+  <body>
+    <div class="content" itemscope itemtype="http://schema.org/Person">
+      <div class="logo"><h1><a href="#" title="Hi there!">Parker Thomas</a></h1></div>
+      <p><strong>Hello, my name is <span itemprop="name">Parker Thomas</span></strong>. Student, <span itemprop="jobTitle">designer, developer</span>, aspiring pentester, maker of musical mashups, amateur photographer, and fan of the Oxford comma.</p>
+      <p></p>
+      <p><strong>Need a website?</strong> I build business and personal websites with a simple, clean-cut, modern look. Please <a href="mailto:parker@iampjt.com">email me</a> for more info.</p>
+      <ul>
+        <li class="envelope"><a href="mailto:parker@iampjt.com" title="Email Me"></a></li>
+        <li class="github"><a href="https://github.com/castlecorp" title="I'm on Github!"></a></li>
+        <li class="linkedin"><a href="https://www.linkedin.com/in/parkerthomas1" title="I'm on LinkedIn!"></a></li>
+        <li class="instagram"><a href="https://instagram.com/parkerjthomas" title="I take pictures sometimes"></a></li>
+        <li class="soundcloud"><a href="https://soundcloud.com/gh-0-stmusic" title="I put noises together sometimes"></a></li>
+      </ul>
+    </div>
+    <script type="text/javascript">
     $(document).ready( function() {
       $(".content").fadeIn(1500);
     });
-  </script>
-</body>
+    </script>
+  </body>
 </div>
 </html>
