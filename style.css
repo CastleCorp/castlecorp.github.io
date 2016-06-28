@@ -72,9 +72,9 @@ ul li.linkedin a { width: 33px; height: 33px; display: block; background: transp
 ul li.instagram a { width: 33px; height: 33px; display: block; background: transparent url(/images/instagram.png) top center no-repeat; text-indent: -9999px; }
 ul li.soundcloud a { width: 33px; height: 33px; display: block; background: transparent url(/images/soundcloud.png) top center no-repeat; text-indent: -9999px; }
 
-.logo h1 a { width: 98px; height: 80px; display: block; background: url('/images/logo.png') top center no-repeat; text-indent: -9999px; padding: 0; margin: 0 auto; border: none; text-align: center; opacity: 1;}
+.logo h1 a { width: 98px; height: 80px; display: block; background: url('/images/logo.png') top center no-repeat; text-indent: -9999px; padding: 0; margin: 0px auto -30px; border: none; text-align: center; opacity: 1;}
 .logo h1 a:hover { opacity: 0.5; -webkit-transition:all 0.2s ease-in-out; }
-.content { max-width: 480px; padding: 3px 20px; display: block; margin: 15% auto 0; background-color: rgba(51,51,51,0.6)}
+.content { max-width: 480px; padding: 3px 20px; display: block; margin: 10% auto 10%; background-color: rgba(51,51,51,0.6)}
 
 .tooltip {
     position: relative;
