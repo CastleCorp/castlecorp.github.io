@@ -3,7 +3,7 @@
 <p><u>Work experience:</u></p><!-- laglaglaglag -->
 <p>For the last few summers I have worked as the lead counselor for the computers camp at <a href="http://www.burgundyfarm.org/summer-programs/summercamp/">Burgundy Farm Summer Day Camp</a>. <em>Summer 2013 - Present</em></p><!-- laglaglaglag -->
 <p>I interned at <a href="infogroup.com">Infogroup</a> assisting in list marketing proposals, target acquisition and research. <em>May - August 2014</em></p><!-- laglaglaglag -->
-<p>Although I am no longer actively developing <a href="talk2troops.org">Talk2Troops.org</a>, I remain involved as technology and development consultant.</p><!-- laglaglaglag --><!-- laglaglaglag --><!-- laglaglaglag --><!-- laglaglaglag -->
+<p>Although I am no longer actively developing <a href="talk2troops.org">Talk2Troops.org</a>, I remain involved as Technology and Development Consultant.</p><!-- laglaglaglag --><!-- laglaglaglag --><!-- laglaglaglag --><!-- laglaglaglag -->
 <p><u>Websites I have built:</u></p><!-- laglaglaglag -->
 <p><a href="http://talk2troops.org">Talk2Troops.org</a> - Lead developer, <em>January 2014 - June 2015.</em></p><!-- laglaglaglag -->
 <p><a href="https://gonox.iampjt.com">The Noxontown Navy</a> - St. Andrew's Alumni Crew <em>(just for fun)</em>.</p><!-- laglaglaglag -->
