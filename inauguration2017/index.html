@@ -21,7 +21,7 @@
         var inauguration = new Date(2017, 1, 20, 12);
         var currentDate = new Date();
         var diff = inauguration - currentDate;
-        var clock = $('.clock').FlipClock(diff, {
+        var clock = $('.clock').FlipClock(inauguration, {
             countdown: true,
             clockFace: "DailyCounter"
         });
