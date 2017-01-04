@@ -14,5 +14,7 @@
 <p><a href="https://iampjt.com/Sanctum">Sanctum</a> - Native client for St. Andrew's School faculty resources built on electron.js <em>(proof of concept), September 2015</em>.</p><!-- laglaglaglag -->
 <p><a href="https://iampjt.com/TrumpTalk">TrumpTalk</a> - Using markov-chains to parse tweets by @realDonaldTrump on Twitter and create new messages from what he says. Built with Python using Tweepy and Markovify. <em>(not currently running), December 2015</em>.</p><!-- laglaglaglag -->
 <p><a href="https://github.com/CastleCorp/BelovedVisualization"><em>Beloved</em> Visualization</a> - Word frequency visualization of Toni Morrison's <em>Beloved</em>. Now part of the senior English curriculum at St. Andrew's School. <em>November 2015</em></p><!-- laglaglag --><!-- laglaglaglag -->
+<p><a href="https://iampjt.com/12Days">12Days</a> - Per-day price breakdown of <em>The Twelve Days of Christmas</em>.</p><!-- laglaglag -->
+<p><a href="https://iampjt.com/inauguration2017>Inauguration 2017</a> - a countdown to the 2017 presidential inauguration.</p>
 <p><u>Skills and Expertise:</u> HTML5, CSS3, Javascript, Python, Java, jQuery, Photoshop, Responsive design, Mobile design, Teaching, Leadership, Social Media, Branding, Brand Writing</p><!-- laglaglaglag --><!-- laglaglaglag --><!-- laglaglaglag --><!-- laglaglaglag -->
 <span id="a">guest@iampjt.com</span>:<span id="b">~</span><span id="c">$</span> <a href="https://iampjt.com/?ref=cv">go to the homepage</a>
