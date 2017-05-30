@@ -2,10 +2,12 @@
 <p>I graduated highschool from <a href="https://standrews-de.org">St. Andrew's School</a> in Delaware in 2016. I currently attend <a href="https://elon.edu">Elon University</a>. I am majoring in Computer Science and hope to eventually work in the cyber security field.</p><!-- laglaglaglag --><!-- laglaglaglag --><!-- laglaglaglag --><!-- laglaglaglag -->
 <p><u>Work experience:</u></p><!-- laglaglaglag -->
 <p>For the last few summers I have worked as the lead counselor for the computers camp at <a href="http://www.burgundyfarm.org/summer-programs/summercamp/">Burgundy Farm Summer Day Camp</a>. <em>Summer 2013 - Present</em></p><!-- laglaglaglag -->
-<p>I interned at <a href=“://infogroup.com">Infogroup</a> assisting in list marketing proposals, target acquisition and research. <em>May - August 2014</em></p><!-- laglaglaglag -->
+<p>I interned at <a href=“://infogroup.com">Infogroup</a> assisting in list marketing proposals, customer acquisition and research. <em>May - August 2014</em></p><!-- laglaglaglag -->
 <p>Although I am no longer actively developing <a href=“://talk2troops.org">Talk2Troops.org</a>, I remain involved as Technology and Development Consultant.</p><!-- laglaglaglag --><!-- laglaglaglag --><!-- laglaglaglag --><!-- laglaglaglag -->
 <p><u>Websites I have built:</u></p><!-- laglaglaglag -->
 <p><a href="http://talk2troops.org">Talk2Troops.org</a> - Lead developer, <em>January 2014 - June 2015.</em></p><!-- laglaglaglag -->
+<p><a href="https://parker-thomas-djny.squarespace.com">IronmanHunter.com</a> - <em>January 2017 - February 2017.</em></p><!-- laglaglaglag -->
+<p><a href="https://saintstactical.com">saintstactical.com</a> - <em>May 2017 - Present.</em></p><!-- laglaglaglag -->
 <p><a href="https://gonox.iampjt.com">The Noxontown Navy</a> - St. Andrew's Alumni Crew <em>(just for fun)</em>.</p><!-- laglaglaglag -->
 <p><a href="https://anotha.one">anotha.one</a> - Let DJ Khaled inspire you! <em>(just for fun)</em></p><!-- laglaglaglag -->
 <p><a href="https://iampjt.com/derivatives">iampjt.com/derivatives</a> - Exploration of derivatives <em>(school project), March 2016</em>.</p><!-- laglaglaglag -->
@@ -15,6 +17,4 @@
 <p><a href="https://iampjt.com/TrumpTalk">TrumpTalk</a> - Using markov-chains to parse tweets by @realDonaldTrump on Twitter and create new messages from what he says. Built with Python using Tweepy and Markovify. <em>(not currently running), December 2015</em>.</p><!-- laglaglaglag -->
 <p><a href="https://github.com/CastleCorp/BelovedVisualization"><em>Beloved</em> Visualization</a> - Word frequency visualization of Toni Morrison's <em>Beloved</em>. Now part of the senior English curriculum at St. Andrew's School. <em>November 2015</em></p><!-- laglaglag --><!-- laglaglaglag -->
 <p><a href="https://iampjt.com/12Days">12Days</a> - Per-day price breakdown of <em>The Twelve Days of Christmas</em>.</p><!-- laglaglag -->
-<p><a href="https://iampjt.com/inauguration2017>Inauguration 2017</a> - a countdown to the 2017 presidential inauguration.</p>
-<p><u>Skills and Expertise:</u> HTML5, CSS3, Javascript, Python, Java, jQuery, Photoshop, Responsive design, Mobile design, Teaching, Leadership, Social Media, Branding, Brand Writing</p><!-- laglaglaglag --><!-- laglaglaglag --><!-- laglaglaglag --><!-- laglaglaglag -->
 <span id="a">guest@iampjt.com</span>:<span id="b">~</span><span id="c">$</span> <a href="https://iampjt.com/?ref=cv">go to the homepage</a>
