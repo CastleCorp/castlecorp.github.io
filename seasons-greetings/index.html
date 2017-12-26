@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Happy holidays!</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+
+	<div class="snowflakes">
+		<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+	</div>
+
+
+	<h1 class="headline" id="headline"></h1>
+	<h2 class="headline">Wishing you a merry Christmas and a happy New Year!</h2>
+<div class="fir">
+  <div class="fir__item"></div>
+  <div class="fir__item"></div>
+  <div class="fir__item"></div>
+  
+  <div class="fir__log"></div>
+  
+  <div class="orbs orbs-1"></div>
+  <div class="orbs orbs-2"></div>
+  <div class="orbs orbs-3"></div>
+  <div class="orbs orbs-4"></div>
+</div>
+
+	<script type="text/javascript">
+		var searchString = window.location.search;
+		var name = searchString.replace("?", "");
+		name = name.replace("+", " ");
+		//console.log(name);
+		var greetingElement = document.getElementById("headline");
+		greetingElement.innerHTML = "Happy Holidays " + name + "!";
+	</script>
+
+</body>
+</html>

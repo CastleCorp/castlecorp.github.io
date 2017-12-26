@@ -50,6 +50,7 @@
 .flip-clock-wrapper {
     font: normal 11px "Helvetica Neue", Helvetica, sans-serif;
     -webkit-user-select: none;
+    user-select: none;
 }
 
 .flip-clock-meridium {
@@ -214,7 +215,6 @@
 }
 
 .flip-clock-divider {
-    float: left;
     display: inline-block;
     position: relative;
     width: 20px;
