@@ -3,37 +3,135 @@
 <head>
 	<title>Happy holidays!</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="tree.css">
+	<link rel="stylesheet" type="text/css" href="snowflakes.css">
+	<link rel="stylesheet" type="text/css" href="lights.css">
+
+	<link rel="shortcut icon" type="image/x-icon" href="img/santa.png" />
 </head>
 <body>
 
-
-	<div class="snowflakes">
-		<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-	</div>
-
+<ul class="lightrope">
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
 
 	<h1 class="headline" id="headline"></h1>
-	<h2 class="headline">Wishing you a merry Christmas and a happy New Year!</h2>
-<div class="fir">
-  <div class="fir__item"></div>
-  <div class="fir__item"></div>
-  <div class="fir__item"></div>
-  
-  <div class="fir__log"></div>
-  
-  <div class="orbs orbs-1"></div>
-  <div class="orbs orbs-2"></div>
-  <div class="orbs orbs-3"></div>
-  <div class="orbs orbs-4"></div>
-</div>
+	<h2 class="subheading" id="message">Wishing you a merry Christmas and a happy New Year!</h2>
+
+	<div class="tree"></div>
+
+	<div style="text-align: center;">
+		<button id="snow" onclick="toggleBtnText();">Let it snow!</button>
+	</div>
+
+	<div class="snowflakes" id="snowflakes" aria-hidden="true" style="display: none;">
+		<div class="snowflake">
+			❄
+		</div>
+		<div class="snowflake">
+			❅
+		</div>
+		<div class="snowflake">
+			❆
+		</div>
+		<div class="snowflake">
+			❄
+		</div>
+		<div class="snowflake">
+			❅
+		</div>
+		<div class="snowflake">
+			❆
+		</div>
+		<div class="snowflake">
+			❄
+		</div>
+		<div class="snowflake">
+			❅
+		</div>
+		<div class="snowflake">
+			❆
+		</div>
+		<div class="snowflake">
+			❄
+		</div>
+	</div>
 
 	<script type="text/javascript">
-		var searchString = window.location.search;
-		var name = searchString.replace("?", "");
-		name = name.replace("+", " ");
-		//console.log(name);
-		var greetingElement = document.getElementById("headline");
-		greetingElement.innerHTML = "Happy Holidays " + name + "!";
+		let params = (new URL(document.location)).searchParams;
+		let name = params.get("name");
+		let lang = params.get("lang");
+
+		let greetingElement = document.getElementById("headline");
+		let messageElement = document.getElementById("message");
+
+		let snowButton = document.getElementById("snow");
+		let snowflakes = document.getElementById("snowflakes");
+
+		if (lang == "en") {
+			greetingElement.innerHTML = "Happy Holidays " + name + "!";
+		}
+
+		if (lang == "fr") {
+			greetingElement.innerHTML = "Bonnes fêtes " + name + "!";
+			messageElement.innerHTML = "Joyeux noel et bonne année!"
+		}
+
+
+		function toggleBtnText() {
+			if (snowButton.innerHTML == "Let it snow!") {
+				snowButton.innerHTML = "Turn off snow";
+			} else {
+				snowButton.innerHTML = "Let it snow!";
+			}
+
+			if (snowflakes.style.display === "none") {
+				snowflakes.style.display = "";
+			} else {
+				snowflakes.style.display = "none";
+			}
+		}
 	</script>
 
 </body>
