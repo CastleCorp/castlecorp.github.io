@@ -1,0 +1,50 @@
+<html>
+<h1>Christmas Card Link Builder</h1>
+
+Name:<br>
+<input type="text" name="name" id="name" placeholder="Thomas Family"><br><br>
+Language:<br>
+<input type="radio" name="lang" id="langEn" value="en" checked> English<br>
+<input type="radio" name="lang" id="langFr" value="fr"> French<br>
+
+<hr style="width:20%; float:left;"><br>
+
+<button onclick="buildLink()">Get Link</button><br><br>
+
+Link:<br>
+<input type="text" name="link" id="link" style="width:20%;"><br>
+<button onclick="copyLink()">Copy to Clipboard</button>
+
+<p style="color:red;" id="alert"></p>
+
+<script>
+  function buildLink() {
+    let base = "https://parkerjthomas.com/seasons-greetings/index.html?";
+
+    let name = document.getElementById("name").value;
+    let lang = "en";
+    if(document.getElementById("langFr").checked) {
+      lang = "fr";
+    }
+
+    name = name.replace(" ", "+");
+
+    let url = base+"name="+name+"&lang="+lang;
+
+    let output = document.getElementById("link");
+    link.value = url;
+
+    }
+
+    function copyLink() {
+      let copyText = document.getElementById("link");
+
+      copyText.select();
+      copyText.setSelectionRange(0, 9999999);
+
+      document.execCommand("copy");
+
+      document.getElementById("alert").innerHTML = "Link copied succesfully!";
+    }
+</script>
+</html>
