@@ -1,0 +1,176 @@
+{
+  "selectedTemplate": 1,
+  "headings": {
+    "work": "Work Experience",
+    "skills": "Skills",
+    "projects": "Projects",
+    "education": "Education",
+    "awards": "Awards and Recognitions"
+  },
+  "basics": {
+    "name": "Parker Thomas",
+    "email": "pthomas7@elon.edu",
+    "phone": "5712286515",
+    "website": "parkerjthomas.com",
+    "location": {
+      "address": "Elon, NC"
+    }
+  },
+  "education": [
+    {
+      "institution": "Elon Unicersity",
+      "location": "Elon, NC",
+      "area": "Computer Science",
+      "studyType": "BA",
+      "startDate": "September 2016",
+      "endDate": "May 2020"
+    },
+    {
+      "institution": "St. Andrews School",
+      "location": "Middletown, DE",
+      "startDate": "September 2012",
+      "endDate": "May 2016",
+      "studyType": "Cum Laude"
+    }
+  ],
+  "work": [
+    {
+      "company": "Captrust Financial Partners",
+      "location": "Raleigh, NC",
+      "position": "Information Security and Application Development Intern",
+      "website": "",
+      "startDate": "June 2019",
+      "endDate": "Present",
+      "highlights": [
+        "Supported the information security team: monitored SIEM alarms, and helped create policies and enforce a strong security posture",
+        "Supported the application development team: added front end and back end security to internal APIs and applications, including using Azure Active Directory authentication"
+      ]
+    },
+    {
+      "highlights": [
+        "Developed Vue components for the progressive web application, including dynamic views, and navigation components",
+        "Automated database migration from Google Sheets to Firebase Firestore using Python",
+        "Made stylistic recommendations to improve the user experience"
+      ],
+      "company": "Sportscube",
+      "position": "Programming Intern",
+      "location": "Maroochydore, Queensland, Australia",
+      "startDate": "July 2018",
+      "endDate": "November 2018"
+    },
+    {
+      "highlights": [
+        "Developed and deployed the Wordpress website",
+        "Customized ecommerce plugins to work with the payment gateway",
+        "Configured analytics reports"
+      ],
+      "company": "Saints Tactical",
+      "position": "Website Developer",
+      "location": "Elon, NC",
+      "startDate": "April 2017",
+      "endDate": "August 2017"
+    },
+    {
+      "highlights": [
+        "Taught the basics of computer hardware",
+        "Taught the fundamentals of programming with Scratch"
+      ],
+      "company": "Burgundy Farm Summer Day Camp",
+      "position": "Lead Computers Counselor",
+      "location": "Alexandria, VA",
+      "startDate": "June 2013",
+      "endDate": "August 2016"
+    }
+  ],
+  "skills": [
+    {
+      "level": "",
+      "keywords": [
+        "Java",
+        "Python",
+        "Javascript",
+        "Swift",
+        "SQL"
+      ],
+      "name": "Programming Languages"
+    },
+    {
+      "keywords": [
+        "HTML",
+        "CSS"
+      ],
+      "name": "Web Development"
+    },
+    {
+      "keywords": [
+        "ELK stack",
+        "LogRhythm",
+        "Incident Response",
+        "Ghidra",
+        "Autopsy"
+      ],
+      "name": "Security"
+    },
+    {
+      "keywords": [
+        "Azure",
+        "Office Suite",
+        null
+      ],
+      "name": "Infrastructure"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Talk2Troops",
+      "description": "A website that allows users to send letters to military members",
+      "keywords": [
+        "HTML",
+        "CSS",
+        "Javascript"
+      ]
+    },
+    {
+      "keywords": [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "Bootstrap"
+      ],
+      "name": "NoxNavy",
+      "description": "A website for the Noxontown Navy (St. Andrews' Alumni Crew)",
+      "url": "https://parkerjthomas.com/noxnavy"
+    },
+    {
+      "keywords": [
+        "Electron"
+      ],
+      "name": "Sanctum",
+      "description": "Native application for St. Andrews School faculty resources to be displayed in the toolbar",
+      "url": "https://parkerjthomas.com/Sanctum"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Eagle Scout",
+      "awarder": "Boy Scouts of America",
+      "summary": "Recognized as an Eagle Scout for completing all ranks and requirements in Scouts",
+      "date": "2012"
+    },
+    {
+      "title": "Order of the Arrow",
+      "date": "2010",
+      "awarder": "Boy Scouts of America",
+      "summary": "Voted to the national Scout honor society"
+    }
+  ],
+  "sections": [
+    "templates",
+    "profile",
+    "education",
+    "skills",
+    "work",
+    "projects",
+    "awards"
+  ]
+}
