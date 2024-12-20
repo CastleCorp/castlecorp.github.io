@@ -28,25 +28,28 @@ Link:<br>
 <script>
   function buildLink() {
     let base = "https://parkerjthomas.com/seasons-greetings/index.html?";
+    let name = document.getElementById("name").value; // Use `let` instead of `const`
 
-    let name = document.getElementById("name").value;
-
+    // Get selected language
+    let lang = "";
     const langButtons = document.querySelectorAll('input[name="lang"]');
-for (const button of langButtons) {
-    if (button.checked) {
-        lang = button.getAttribute("value");
-        break;
+    for (const button of langButtons) {
+        if (button.checked) {
+            lang = button.getAttribute("value");
+            break;
+        }
     }
-}
 
-    name = name.replace(" ", "+");
+    // Replace spaces with "+" in the name
+    name = name.replace(/ /g, "+"); // This is now valid
 
-    let url = base+"name="+name+"&lang="+lang;
+    // Build the URL
+    let url = base + "name=" + name + "&lang=" + lang;
 
+    // Set the link in the output element
     let output = document.getElementById("link");
-    link.value = url;
-
-    }
+    output.value = url;
+}
 
     function copyLink() {
       let copyText = document.getElementById("link");
