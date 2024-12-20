@@ -11,6 +11,9 @@ Name:<br>
 Language:<br>
 <input type="radio" name="lang" id="langEn" value="en" checked> English<br>
 <input type="radio" name="lang" id="langFr" value="fr"> French<br>
+<input type="radio" name="lang" id="langEs" value="es"> Spanish<br>
+<input type="radio" name="lang" id="langDe" value="de"> German<br>
+<input type="radio" name="lang" id="langNl" value="nl"> Dutch<br>
 
 <hr style="width:20%; float:left;"><br><br>
 
@@ -26,11 +29,13 @@ Link:<br>
   function buildLink() {
     let base = "https://parkerjthomas.com/seasons-greetings/index.html?";
 
-    let name = document.getElementById("name").value;
-    let lang = "en";
-    if(document.getElementById("langFr").checked) {
-      lang = "fr";
+    const langButtons = document.querySelectorAll('input[name="lang"]');
+for (const button of langButtons) {
+    if (button.checked) {
+        lang = button.getAttribute("value");
+        break;
     }
+}
 
     name = name.replace(" ", "+");
 

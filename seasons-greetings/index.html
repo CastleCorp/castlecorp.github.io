@@ -1,141 +1,102 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Happy holidays!</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" type="text/css" href="tree.css">
-	<link rel="stylesheet" type="text/css" href="snowflakes.css">
-	<link rel="stylesheet" type="text/css" href="lights.css">
+	<link rel="stylesheet" type="text/css" href="./style.css">
 
-	<link rel="shortcut icon" type="image/x-icon" href="img/santa.png" />
+	<link rel="shortcut icon" type="image/x-icon" href="https://parkerjthomas.com/seasons-greetings/img/santa.png">
 </head>
 <body>
-
-<ul class="lightrope">
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-</ul>
-
-	<h1 class="headline" id="headline"></h1>
-	<h2 class="subheading" id="message">Wishing you a merry Christmas and a happy New Year!</h2>
-
-	<div class="tree"></div>
-
-	<div style="text-align: center;">
-		<button id="snow" onclick="toggleBtnText();" style="font-size:1.5em;">Let it snow!</button>
-	</div>
-
-	<div style="text-align: center; padding-top:2%;">
-		<a href="https://parkerjthomas.com/seasons-greetings/linkBuilder.html" style="color:white; font-size:0.6em;">Make your own card!</a>
-	</div>
-	<div class="snowflakes" id="snowflakes" aria-hidden="true" style="display: none;">
-		<div class="snowflake">
-			❄
+	<main>
+		<div class="snowflakes" id="snowflakes" aria-hidden="true" style="display: none;">
 		</div>
-		<div class="snowflake">
-			❅
+	
+		<ul class="lightrope"></ul>
+	
+		<h1 class="headline" id="headline"></h1>
+		<h2 class="subheading" id="message">Wishing you a merry Christmas and a happy New Year!</h2>
+	
+		<div class="tree"></div>
+	
+		<div style="text-align: center;">
+			<button id="snow" style="font-size:1.25em;">Let it snow!</button>
+			<button id="music" onclick="togglePlayback()" style="font-size:1.25em;">Play music</button>
+		</div>	
+	</main>
+	<footer>
+		<div style="text-align: center; padding-top:2%;">
+			<a href="https://parkerjthomas.com/seasons-greetings/linkBuilder.html" style="color:white; font-size:0.6em;">Make your own card!</a>
 		</div>
-		<div class="snowflake">
-			❆
-		</div>
-		<div class="snowflake">
-			❄
-		</div>
-		<div class="snowflake">
-			❅
-		</div>
-		<div class="snowflake">
-			❆
-		</div>
-		<div class="snowflake">
-			❄
-		</div>
-		<div class="snowflake">
-			❅
-		</div>
-		<div class="snowflake">
-			❆
-		</div>
-		<div class="snowflake">
-			❄
-		</div>
-	</div>
+	</footer>
 
-	<script type="text/javascript">
-		let params = (new URL(document.location)).searchParams;
-		let name = params.get("name");
-		let lang = params.get("lang");
+	<!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
 
-		let greetingElement = document.getElementById("headline");
-		let messageElement = document.getElementById("message");
-
-		let snowButton = document.getElementById("snow");
-		let snowflakes = document.getElementById("snowflakes");
-
-		if (lang == "en") {
-			greetingElement.innerHTML = "Happy Holidays " + name + "!";
-		}
-
-		if (lang == "fr") {
-			greetingElement.innerHTML = "Bonnes fêtes " + name + "!";
-			messageElement.innerHTML = "Joyeux noel et bonne année!"
-		}
-
-
-		function toggleBtnText() {
-			if (snowButton.innerHTML == "Let it snow!") {
-				snowButton.innerHTML = "Turn off snow";
-			} else {
-				snowButton.innerHTML = "Let it snow!";
+		<script>
+		  // 2. This code loads the IFrame Player API code asynchronously.
+		  var tag = document.createElement('script');
+	
+		  tag.src = "https://www.youtube.com/iframe_api";
+		  var firstScriptTag = document.getElementsByTagName('script')[0];
+		  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+	
+		  // 3. This function creates an <iframe> (and YouTube player)
+		  //    after the API code downloads.
+		  var player;
+		  function onYouTubeIframeAPIReady() {
+			player = new YT.Player('player', {
+			  height: '390',
+			  width: '640',
+			  videoId: 'y7eizVOfksE',
+			  playerVars: {
+				'playsinline': 1
+			  },
+			  events: {
+				'onReady': onPlayerReady,
+				'onStateChange': onPlayerStateChange
+			  }
+			});
+		  }
+	
+		  // 4. The API will call this function when the video player is ready.
+		  function onPlayerReady(event) {
+			event.target.pauseVideo();
+		  }
+	
+		  // 5. The API calls this function when the player's state changes.
+		  //    The function indicates that when playing a video (state=1),
+		  //    the player should play for six seconds and then stop.
+		  var done = false;
+		  function onPlayerStateChange(event) {
+			if (event.data == YT.PlayerState.PLAYING && !done) {
+			  setTimeout(stopVideo, 6000);
+			  done = true;
 			}
+		  }
+		  function stopVideo() {
+			player.sto
+			pVideo();
+		  }
 
-			if (snowflakes.style.display === "none") {
-				snowflakes.style.display = "";
+		  function togglePlayback() {
+			if(player.getPlayerState() == YT.PlayerState.PLAYING) {
+				player.pauseVideo();
 			} else {
-				snowflakes.style.display = "none";
+				player.playVideo();
 			}
-		}
-	</script>
+		  }
+		</script>
 
-</body>
-</html>
+		<div id="player"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./script.js"></script>
+
+	<style>
+		iframe {
+			display: none;
+		}
+		button:hover {
+			cursor: pointer;
+		}
+	</style>
+
+</body></html>
